@@ -1,7 +1,16 @@
+
+<div class="list-title">
 <h1><u>Bookmark a movie</u></h1>
 
+</div>
+<div class="container">
 <%= simple_form_for [@list, @bookmark] do |f| %>
-  <%= f.association :movie %>
-  <%= f.input :comment %>
-  <%= f.button :submit %>
+  <%= f.association :movie, id: "input" %>
+  <%= f.input :comment, id: "input" %>
+  <%= f.button :submit, class: "add-button" %>
 <% end %>
+</div>
+
+<hr>
+<br>
+<%= link_to "Back to lists", list_path(@list), class: "add-button" %>

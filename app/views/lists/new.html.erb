@@ -1,10 +1,17 @@
-<h1><u>Create a new List:</u></h1>
 
-<%= simple_form_for @list do |f| %>
-  <%= f.input :name  %>
-  <%= f.button :submit  %>
-<% end %>
+<div class="list-title">
+
+<h1><u>Create a new List:</u></h1>
+</div>
+<div class="container">
+
+  <%= simple_form_for @list do |f| %>
+    <%= f.input :name  %>
+    <%= f.button :submit, class: "add-button" %>
+  <% end %>
+</div>
 
 
 <hr>
-<%= link_to "🔙 Back to lists", lists_path %>
+<br>
+<%= link_to "🔙 Back to lists", root_path, class: "add-button"%>
